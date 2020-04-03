@@ -131,6 +131,7 @@
                 tl:tl_tab_padding="0dp"
                 tl:tl_tab_width="95dp"
                 tl:tl_indicator_width_equal_title="true"
+                tl:tl_textBold="SELECT"
                 tl:tl_textsize="15sp"/>
         </LinearLayout>
 
