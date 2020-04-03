@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.flyco.tablayout.SlidingTabLayout;
@@ -63,6 +64,7 @@ public class SlidingTabActivity extends AppCompatActivity implements OnTabSelect
         SlidingTabLayout tabLayout_9 = ViewFindUtils.find(decorView, R.id.tl_9);
         /** indicator圆角色块 */
         SlidingTabLayout tabLayout_10 = ViewFindUtils.find(decorView, R.id.tl_10);
+        SlidingTabLayout tabLayout_11 = ViewFindUtils.find(decorView, R.id.tl_11);
 
         tabLayout_1.setViewPager(vp);
         tabLayout_2.setViewPager(vp);
@@ -75,6 +77,7 @@ public class SlidingTabActivity extends AppCompatActivity implements OnTabSelect
         tabLayout_8.setViewPager(vp, mTitles, this, mFragments);
         tabLayout_9.setViewPager(vp);
         tabLayout_10.setViewPager(vp);
+        tabLayout_11.setViewPager(vp);
 
         vp.setCurrentItem(4);
 
@@ -108,6 +111,12 @@ public class SlidingTabActivity extends AppCompatActivity implements OnTabSelect
 //                tabLayout_7.addNewTab("后端");
 //            }
 //        });
+        TextView tv0 = tabLayout_11.getTitleView(0);
+        tv0.setCompoundDrawablesWithIntrinsicBounds(null, null,
+                getResources().getDrawable(android.R.drawable.ic_menu_search),null);
+        TextView tv1 = tabLayout_11.getTitleView(1);
+        tv1.setCompoundDrawablesWithIntrinsicBounds(null, null,
+                getResources().getDrawable(android.R.drawable.ic_menu_send),null);
     }
 
     @Override
