@@ -117,6 +117,10 @@ public class SlidingTabActivity extends AppCompatActivity implements OnTabSelect
         TextView tv1 = tabLayout_11.getTitleView(1);
         tv1.setCompoundDrawablesWithIntrinsicBounds(null, null,
                 getResources().getDrawable(android.R.drawable.ic_menu_send),null);
+        TextView tv2 = tabLayout_11.getTitleView(2);
+        tv2.setCompoundDrawablesWithIntrinsicBounds(null, null,
+                getResources().getDrawable(R.drawable.ic_drawale_right_selector),null);
+
     }
 
     @Override
