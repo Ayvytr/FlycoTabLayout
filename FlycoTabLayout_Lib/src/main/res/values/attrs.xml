@@ -3,6 +3,8 @@
     <!-- indicator -->
     <!-- 设置显示器颜色 -->
     <attr name="tl_indicator_color" format="color"/>
+    <!--  指示器渐变颜色数组-->
+    <attr name="tl_indicator_color_array" format="reference"/>
     <!-- 设置显示器高度 -->
     <attr name="tl_indicator_height" format="dimension"/>
     <!-- 设置显示器固定宽度 -->
@@ -80,6 +82,7 @@
     <declare-styleable name="SlidingTabLayout">
         <!-- indicator -->
         <attr name="tl_indicator_color"/>
+        <attr name="tl_indicator_color_array"/>
         <attr name="tl_indicator_height"/>
         <attr name="tl_indicator_width"/>
         <attr name="tl_indicator_margin_left"/>

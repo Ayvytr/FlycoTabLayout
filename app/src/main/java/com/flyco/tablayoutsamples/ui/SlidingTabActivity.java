@@ -92,6 +92,9 @@ public class SlidingTabActivity extends AppCompatActivity implements OnTabSelect
         tabLayout_2.showMsg(5, 5);
         tabLayout_2.setMsgMargin(5, 0, 10);
 
+        //指示器设置渐变色
+        int[] colors = {Color.RED, Color.YELLOW, Color.BLACK, Color.WHITE, Color.GREEN};
+        tabLayout_3.setIndicatorColors(colors);
 //        tabLayout_7.setOnTabSelectListener(new OnTabSelectListener() {
 //            @Override
 //            public void onTabSelect(int position) {

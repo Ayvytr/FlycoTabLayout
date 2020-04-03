@@ -63,6 +63,7 @@
                 android:background="#009688"
                 tl:tl_tab_padding="0dp"
                 tl:tl_tab_width="95dp"
+                tl:tl_indicator_color_array="@array/colors"
                 tl:tl_textsize="15sp"/>
 
             <com.flyco.tablayout.SlidingTabLayout

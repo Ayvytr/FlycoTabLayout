@@ -97,6 +97,9 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
     private int mHeight;
     private boolean mSnapOnTabClick;
 
+    private int[] mIndicatorColors;
+    private boolean mIsGradualColor;
+
     public SlidingTabLayout(Context context) {
         this(context, null, 0);
     }
@@ -136,6 +139,12 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
 
         mIndicatorStyle = ta.getInt(R.styleable.SlidingTabLayout_tl_indicator_style, STYLE_NORMAL);
         mIndicatorColor = ta.getColor(R.styleable.SlidingTabLayout_tl_indicator_color, Color.parseColor(mIndicatorStyle == STYLE_BLOCK ? "#4B6A87" : "#ffffff"));
+        int arrayId = ta.getResourceId(R.styleable.SlidingTabLayout_tl_indicator_color_array, -1);
+        if(arrayId != -1) {
+            mIndicatorColors = context.getResources().getIntArray(arrayId);
+            mIsGradualColor = true;
+        }
+
         mIndicatorHeight = ta.getDimension(R.styleable.SlidingTabLayout_tl_indicator_height,
                 dp2px(mIndicatorStyle == STYLE_TRIANGLE ? 4 : (mIndicatorStyle == STYLE_BLOCK ? -1 : 2)));
         mIndicatorWidth = ta.getDimension(R.styleable.SlidingTabLayout_tl_indicator_width, dp2px(mIndicatorStyle == STYLE_TRIANGLE ? 10 : -1));
@@ -504,7 +513,13 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
                         mIndicatorRect.right + getPaddingLeft(), getHeight(), mRectPaint);*/
 
             if (mIndicatorHeight > 0) {
-                mIndicatorDrawable.setColor(mIndicatorColor);
+                if(mIsGradualColor) {
+                    mIndicatorDrawable.setOrientation(GradientDrawable.Orientation.LEFT_RIGHT);
+                    mIndicatorDrawable.setColors(mIndicatorColors);
+                    mIndicatorDrawable.setGradientType(GradientDrawable.LINEAR_GRADIENT);
+                } else {
+                    mIndicatorDrawable.setColor(mIndicatorColor);
+                }
 
                 if (mIndicatorGravity == Gravity.BOTTOM) {
                     mIndicatorDrawable.setBounds(paddingLeft + (int) mIndicatorMarginLeft + mIndicatorRect.left,
@@ -557,6 +572,13 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
 
     public void setIndicatorColor(int indicatorColor) {
         this.mIndicatorColor = indicatorColor;
+        mIsGradualColor = false;
+        invalidate();
+    }
+
+    public void setIndicatorColors(int[] indicatorColors) {
+        this.mIndicatorColors = indicatorColors;
+        mIsGradualColor = true;
         invalidate();
     }
 
