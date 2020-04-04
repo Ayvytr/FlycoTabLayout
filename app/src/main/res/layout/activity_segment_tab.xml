@@ -90,6 +90,7 @@
             tl:tl_indicator_margin_left="2dp"
             tl:tl_indicator_margin_right="2dp"
             tl:tl_indicator_margin_top="2dp"
+            tl:tl_textSelectedSize="@dimen/_18sp"
             tl:tl_tab_space_equal="true"/>
     </LinearLayout>
 </ScrollView>

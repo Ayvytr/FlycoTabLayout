@@ -126,6 +126,7 @@
             tl:tl_indicator_margin_left="5dp"
             tl:tl_indicator_margin_right="5dp"
             tl:tl_indicator_style="BLOCK"
+            tl:tl_textSelectedSize="@dimen/_18sp"
             tl:tl_textsize="14sp"/>
     </LinearLayout>
 </ScrollView>
