@@ -40,9 +40,14 @@ can be used freely with other widgets together.
 
 
 >## Change Log
->2020-4-3 
+>2020-4-5
 >
 >* add tl_indicator_color_array, use integer array, set indicator colors **only** for SlidingTabLayout of **STYLE_NORMAL**.
+>* fix when SlidingTabLayout tl_indicator_width_equal_title="true", after set item title's drawable, indicator width not equal textview width
+>* open SlidingTabLayout item text selected property, support selected drawable selector
+>* fix bug tl_textBold="SELECT" not working
+>* add tl_textSelectedSize, support customize selected item text size
+>* support androidx
 
  > v2.0.2(2016-04-23)
  >
@@ -103,6 +108,7 @@ dependencies{
 | tl_tab_space_equal |boolean| set tab space equal|
 | tl_tab_width |dimension| set tab width|
 | tl_textsize |dimension| set text size|
+| tl_textSelectedSize |dimension| set selected text size |
 | tl_textSelectColor |color| set text select color|
 | tl_textUnselectColor |color|  set text unselect color|
 | tl_textBold |boolean| set text is bold |
@@ -115,10 +121,6 @@ dependencies{
 | tl_indicator_anim_duration |integer| set indicator animation duration(only for CommonTabLayout)|
 | tl_indicator_bounce_enable |boolean| set indicator aniamtion with bounce effect(only for CommonTabLayout)|
 | tl_indicator_width_equal_title |boolean| set indicator width same as text(only for SlidingTabLayout)|
-
-## Dependence
-*   [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)
-*   [FlycoRoundView](https://github.com/H07000223/FlycoRoundView)
 
 ## Thanks
 *   [PagerSlidingTabStrip](https://github.com/jpardogo/PagerSlidingTabStrip)

@@ -39,9 +39,14 @@
 
 
 >## Change Log
->2020-4-3
+>2020-4-5
 >
 >* 使用int array，设置SlidingTabLayout **STYLE_NORMAL** 状态下指示器渐变色，从左到右渐变  
+>* 修改SlidingTabLayout tl_indicator_width_equal_title=true时，设置过item title的drawable后指示器宽度比textview小的问题
+>* 打开SlidingTabLayout item text selected属性，支持selected drawable selecter
+>* 修复tl_textBold="SELECT"时字体加粗问题
+>* 增加tl_textSelectedSize设置选中字体大小属性
+>* 支持androidx
 
  > v2.0.2(2016-04-23)
  >
@@ -100,6 +105,7 @@ dependencies{
 | tl_tab_space_equal |boolean| 设置tab大小等分|
 | tl_tab_width |dimension| 设置tab固定大小|
 | tl_textsize |dimension| 设置字体大小|
+| tl_textSelectedSize |dimension| 设置选中字体大小 |
 | tl_textSelectColor |color| 设置字体选中颜色|
 | tl_textUnselectColor |color| 设置字体未选中颜色|
 | tl_textBold |boolean| 设置字体加粗|
@@ -113,9 +119,7 @@ dependencies{
 | tl_indicator_bounce_enable |boolean| 设置显示器支持动画回弹效果(only for CommonTabLayout)|
 | tl_indicator_width_equal_title |boolean| 设置显示器与标题一样长(only for SlidingTabLayout)|
 
-## Dependence
-*   [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)
-*   [FlycoRoundView](https://github.com/H07000223/FlycoRoundView)
+
 
 ## Thanks
 *   [PagerSlidingTabStrip](https://github.com/jpardogo/PagerSlidingTabStrip)
