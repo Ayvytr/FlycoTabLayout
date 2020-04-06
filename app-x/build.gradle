@@ -23,7 +23,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.ayvytr:ktx:+'
-//    compile project(':FlycoTabLayout_Lib')
+
+    implementation 'com.google.android.material:material:1.1.0'
 
     //--->support 3.0+
 //    def useJcenter = true

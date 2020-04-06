@@ -1,1 +1,1 @@
-include ':app', ':flyco-tab-layout', ':flyco-tab-layout-x', ':app-x'
+include ':flyco-tab-layout-x', ':app-x', ':flyco-tab-layout', ':app'
