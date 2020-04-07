@@ -26,15 +26,11 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.1.0'
 
-    //--->support 3.0+
-//    def useJcenter = true
-    def useJcenter = false
+    def useJcenter = true
+//    def useJcenter = false
     if(useJcenter) {
-//        implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+        implementation 'com.ayvytr:flyco-tab-layout-x:0.1.0'
     } else {
         implementation project(':flyco-tab-layout-x')
     }
-    //--->support 2.2+
-//    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
-//    compile 'com.nineoldandroids:library:2.4.0'
 }

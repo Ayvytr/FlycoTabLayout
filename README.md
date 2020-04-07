@@ -1,7 +1,22 @@
-# TabLayout
-Android TabLayout库，前身[FlycoTabLayout]()
+# FlycoTabLayout
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FlycoTabLayout-green.svg?style=true)](https://android-arsenal.com/details/1/2756)
 
-一个Android TabLayout库,目前有3个TabLayout
+一个Android TabLayout库，FlycoTabLayout做了一些bug修复，小功能添加，支持了androidx。
+
+**注意：不增加新的功能，有新功能需求请pull request。**
+
+## Gradle
+
+```groovy
+android	
+	implementation 'com.ayvytr:flyco-tab-layout:0.1.0'
+androidx
+	implementation 'com.ayvytr:flyco-tab-layout-x:0.1.0'
+```
+
+
+
+目前有3个TabLayout：
 
 * SlidingTabLayout:参照[PagerSlidingTabStrip](https://github.com/jpardogo/PagerSlidingTabStrip)进行大量修改.
     * 新增部分属性
@@ -38,8 +53,8 @@ Android TabLayout库，前身[FlycoTabLayout]()
 ![](https://github.com/H07000223/FlycoTabLayout/blob/master/preview_3.gif)
 
 
->## Change Log
->2020-4-5
+>## Change Log(只提供我修改过的内容)
+>0.1.0
 >
 >* 使用int array，设置SlidingTabLayout **STYLE_NORMAL** 状态下指示器渐变色，从左到右渐变  
 >* 修改SlidingTabLayout tl_indicator_width_equal_title=true时，设置过item title的drawable后指示器宽度比textview小的问题
@@ -47,38 +62,9 @@ Android TabLayout库，前身[FlycoTabLayout]()
 >* 修复tl_textBold="SELECT"时字体加粗问题
 >* 增加tl_textSelectedSize设置选中字体大小属性
 >* 支持androidx
+>* minSdkVersion从14提高为16
 
- > v2.0.2(2016-04-23)
- >
- > * 删除了对NineOldAnimation库依赖(仅支持3.0+)
 
- > v2.0.0(2016-03-01)
-   - 删除了对FlycoRoundView库的依赖
-   - 新增方法getIconView和getTitleView(为了某些情况需要动态更新icon之类的)
-
-## Gradle
-
-```groovy
-dependencies{
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
-}
-
-After v2.0.0(support 2.2+)
-dependencies{
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
-}
-
-After v2.0.2(support 3.0+)
-dependencies{
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
-}
-```
 
 ## Attributes
 
@@ -121,5 +107,3 @@ dependencies{
 
 
 
-## Thanks
-*   [PagerSlidingTabStrip](https://github.com/jpardogo/PagerSlidingTabStrip)
